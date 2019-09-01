@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Description" content="Chrome extension. Adds non implemented by Google possibility to search within(inside of) YouTube playlist.">
+	<link rel="shortcut icon" type="image/png" href="logo128.png"/>
+	<title>Youtube playlist search. Search within playlist</title>
+</head>
+<body>
+	<style>
+		body,
+		html {
+		    position: relative;
+		    overflow: hidden;
+		    width: 100%;
+		    height: 100%;
+		    padding: 0;
+		    margin: 0;
+		    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		    line-height: 1.59;
+		    font-size: 18px;
+	    	-webkit-tap-highlight-color: transparent;
+	    	background-color: #fff;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		p {
+		    margin: 0
+		}
+
+		li,
+		ul {
+		    margin: 0;
+		    padding: 0;
+		}
+
+		h1{
+			font-size: 100%;
+		}
+
+		.yt_plas__header{
+			position: absolute;
+
+			top: 50px;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			transform: translateX(-50%);
+
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		.yt_plas{
+			height: 100%;
+
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+		}
+
+		.yt_plas__img_wr,
+		.yt_plas__text_wr{
+			height: 100%;
+			width: 50%;
+
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: center;
+			-webkit-flex-wrap: wrap;
+			-moz-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			-o-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+
+		.yt_plas__img{
+			width: 80%;
+		}
+
+		.yt_plas__title{
+			width: 100%;
+		    padding-bottom: 14px;
+
+			color: #ff944d;
+			font-size: 26px;
+		    font-weight: normal;
+		}
+
+		.yt_plas__text{
+			width: 80%;
+
+			color: #b33636;
+		}
+
+		.yt_plas__link{
+			color: #b33693;
+
+			-webkit-transition: all ease .4s;
+			-o-transition: all ease .4s;
+			transition: all ease .4s;
+		}
+
+		.yt_plas__text-col{
+			color: #ff944d
+		}
+
+		.yt_plas__link-head{
+			color: #ff4d4d;	
+		}
+
+		.yt_plas__link:hover{
+			color: #ff944d;	
+		}
+
+		*::selection{
+			color: #fff;
+
+			background-color: #ff4d4d;
+		}
+	</style>
+	<header class="yt_plas__header">
+		<a href="https://chrome.google.com/webstore/detail/youtube-plas-playlist-sea/lcimgnlononijobbcfdejigpaobhcokk" target="_blank" class="yt_plas__link yt_plas__link-head">
+			<h1 class="yt_plas__head">
+				YouTube PLAS - PlAylist Search :)
+			</h1>
+		</a>
+	</header>
+	<section class="yt_plas">
+		<div class="yt_plas__img_wr">
+			<img src="images/image1.jpg" alt="preview_iamge" class="yt_plas__img">
+		</div>
+		<div class="yt_plas__text_wr">
+			<div>
+				<h3 class="yt_plas__title">Shortly about:</h3>
+				<ul class="yt_plas__text">
+					<li class="yt_plas__point">
+						Search within public/private playlist - as far as you not going to search through your private playlist, you can to not authorize. Keep your data away from me, haHaa! (I do not get it anyway);
+					</li>
+					<li class="yt_plas__point">
+						<a href="https://github.com/RomanistHere/YouTube-Search-Playlist" target="_blank" class="yt_plas__link">Open sourced</a> - See exactly what is going on or help me to improve;
+					</li>
+					<li class="yt_plas__point">
+						See stats about your search - partly implemented, <span class="yt_plas__text-col"> working on it</span>;
+					</li>
+					<li class="yt_plas__point">
+						Smart search - use "-" sing etc. to exclude some word from results - <span class="yt_plas__text-col"> in development</span>;
+					</li>
+					<li class="yt_plas__point">
+						Set settings for searching - open in current/new tab, search for string/any of words/every word - <span class="yt_plas__text-col"> in development</span>;
+					</li>
+					<li class="yt_plas__point">
+						Sharing your statistic results through social networks - <span class="yt_plas__text-col"> in development</span>;
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<script>
+		_gaq.push(['_setAccount', 'UA-138501898-4']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		  var ga = document.createElement('script');
+		  ga.type = 'text/javascript';
+		  ga.async = true;
+		  ga.src = 'https://ssl.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0];
+		  s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>
